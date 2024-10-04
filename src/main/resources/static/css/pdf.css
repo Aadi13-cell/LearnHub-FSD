@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.pdf-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pdf-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.pdf-card:hover {
+    transform: scale(1.05);
+}
+
+.pdf-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.pdf-card p {
+    font-size: 16px;
+    color: #555;
+}

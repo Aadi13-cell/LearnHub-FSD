@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub : Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/usersstyles.css">
+    <style>
+        /* Hide all sections by default */
+        .content-section {
+            display: none;
+        }
+
+        /* Show the active section */
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="dashboard">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" style="background-color: #41153d; color: azure;">
+            <div style="display: flex; gap: 2px; align-items: center; height: 60px; position: relative; font-size: large;">
+                <img class="logo" src="logo_svg_1.png" alt="" style="height: 40px; width: 40px; padding: 5px;">
+                <div class="logo_name">LearnHub</div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div><br>
+            <ul >
+                <li style="color: azure;"><a href="#" class="tab-link" data-target="home"><span class="material-icons">home</span>Home</a>
+                </li>
+                <li style="color: azure;"><a href="#" class="tab-link" data-target="search"><span
+                            class="material-icons">search</span>Search</a></li>
+                <li style="color: azure;"><a href="#" class="tab-link" data-target="courses"><span
+                            class="material-icons">school</span>Courses</a></li>
+                <li style="color: azure;"><a href="#" class="tab-link" data-target="saved"><span
+                            class="material-icons">bookmark</span>Saved</a></li>
+                <li style="color: azure;"><a href="#" class="tab-link" data-target="profile"><span
+                            class="material-icons">person</span>Profile</a></li>
+                <li style="color: azure;"><a href="/logout" data-target="logout"><span class="material-icons">logout</span>Logout</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Main Content Area -->
+        <div class="main-content" style="background-color: #ca6d874a;">
+            <div class="themedl">
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <section id="profile" class="content-section">
+                <header>
+                    <div style="background-color: #ad4da5;">
+                        <div class="user-info">
+                            <img src="https://via.placeholder.com/80" alt="User Photo" class="user-photo">
+                            <div>
+                                <h1 class="user-name">
+                                    Hello [[${value.name}]]
+                                </h1>
+                                <span class="location">Kanpur</span>
+                            </div>
+                        </div>
+                        <div class="user-stats">
+                            <div class="stat">
+                                <h3>0</h3>
+                                <p>My Courses</p>
+                            </div>
+                            <div class="stat">
+                                <h3>2</h3>
+                                <p>Followers</p>
+                            </div>
+                            <div class="stat">
+                                <h3>32</h3>
+                                <p>Following</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <section class="statistics-section">
+                    <h3>Total Statistics</h3>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="material-icons">check_circle</span>
+                            <p>Finished Courses</p>
+                            <h4>3</h4>
+                        </div>
+                        <div class="stat-item">
+                            <span class="material-icons">access_time</span>
+                            <p>Hours Learned</p>
+                            <h4>56</h4>
+                        </div>
+                        <div class="stat-item">
+                            <span class="material-icons">emoji_events</span>
+                            <p>Skills Achieved</p>
+                            <h4>7</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="achievements-section">
+                    <h3>Achievements</h3>
+                    <div class="achievement">
+                        <div class="achievement-info">
+                            <span class="material-icons">hourglass_top</span>
+                            <p>Committed Learner</p>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                        <span>2/3</span>
+                    </div>
+                    <div class="achievement">
+                        <div class="achievement-info">
+                            <span class="material-icons">emoji_events</span>
+                            <p>Point Collector</p>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 89%;"></div>
+                        </div>
+                        <span>1200/3000</span>
+                    </div>
+                </section>
+
+                <section class="friends-container">
+                    <div class="friend-suggestions">
+                        <h3>Friend Suggestions</h3>
+
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/40" alt="Friend Photo">
+                                <span>Raj</span>
+                                <button class="add-btn">+</button>
+                            </li>
+                            <li>
+                                <img src="https://via.placeholder.com/40" alt="Friend Photo">
+                                <span>Golu</span>
+                                <button class="add-btn">+</button>
+                            </li>
+                            <li>
+                                <img src="https://via.placeholder.com/40" alt="Friend Photo">
+                                <span>Nikhil</span>
+                                <button class="add-btn">+</button>
+                            </li>
+                        </ul>
+                        <a href="#">View All</a>
+                    </div>
+
+                    <div class="friends">
+                        <h3>Friends</h3>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/40" alt="Friend Photo">
+                                <span>Ritesh</span>
+                                <button class="profile-btn">Profile</button>
+                            </li>
+                            <li>
+                                <img src="https://via.placeholder.com/40" alt="Friend Photo">
+                                <span>Anna Clarke</span>
+                                <button class="profile-btn">Profile</button>
+                            </li>
+                        </ul>
+                        <a href="#">View All</a>
+                    </div>
+
+                </section>
+            </section>
+
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <h1>Featured Courses</h1><br>
+                <section class="featured-courses">
+
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <p>Web Design</p>
+                            <p>Ritesh Agarwal</p>
+                            <p>1h 53m - 4.9/5</p>
+                            <p>$24</p>
+                        </div>
+                        <div class="course-card">
+                            <p>Building Anroid App</p>
+                            <p>Praiyanshu Singh</p>
+                            <p>59m - 4.6/5</p>
+                            <p>$18</p>
+                        </div>
+                        <div class="course-card">
+                            <p>JavaScript</p>
+                            <p>Om Prakash</p>
+                            <p>1h 23m - 4.3/5</p>
+                            <p>$24</p>
+                        </div>
+                        <div class="course-card">
+                            <p>Power BI</p>
+                            <p>Rahu Rastogi</p>
+                            <p>1h 17m - 4.1/5</p>
+                            <p>$24</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Categories -->
+                <section class="categories">
+                    <h2>Categories</h2>
+                    <div class="categories-grid">
+                        <button>Sales</button>
+                        <button>HR</button>
+                        <button>Drawing</button>
+                        <button>Big Data</button>
+                        <button>Design</button>
+                        <button>Marketing</button>
+                        <button>Astronomy</button>
+                    </div>
+                </section>
+
+                <!-- My Learning -->
+                <section class="my-learning">
+                    <h2>My Learning</h2>
+                    <div class="learning-card">
+                        <p>Becoming a Photographer</p>
+                        <p>Clara Manning</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 69%;"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="learning-card">
+                        <p>Design Thinking 2.0</p>
+                        <p>Chris Kinley</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 89%;"></div>
+                        </div>
+                    </div>
+
+
+
+
+                    <button class="see-all">See All</button>
+                </section>
+                </main>
+            </section>
+
+            <!-- Search Section -->
+            <section id="search" class="content-section">
+                <main class="main-content">
+                    <!-- <div class="themedl">
+                        <div class="theme-toggle">
+                            <label class="switch">
+                                <input type="checkbox" id="theme-switch">
+                                <span class="slider"></span>
+                            </label>
+
+                        </div>
+                    </div> -->
+
+
+
+                    <h1>Find your favorites</h1>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search categories">
+                        <button class="search-btn">SEARCH</button>
+                    </div>
+
+                    <!-- <section class="top-searches">
+                        <h2>Top Searches</h2>
+                        <div class="search-tags">
+                            
+                    </section> -->
+                    <section class="categories">
+                        <h2>Categories</h2>
+                        <div class="categories-grid">
+                            <button>Marketing Strategy</button>
+                            <button>UX Design</button>
+                            <button>Excel</button>
+                            <button>Adobe Photoshop</button>
+                            <button>CRM</button>
+                            <button>Photography</button>
+                            <button>Content Making</button>
+                        </div>
+                    </section>
+
+
+                    <section class="filters">
+                        <h2>Categories</h2>
+                        <div class="categories">
+                            <label><input type="checkbox" checked> Sales</label>
+                            <label><input type="checkbox"> HR</label>
+                            <label><input type="checkbox"> Drawing</label>
+                            <label><input type="checkbox" checked> Big Data</label>
+                            <label><input type="checkbox" checked> Design</label>
+                        </div>
+
+                        <h2>Rating</h2>
+                        <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
+                        </div>
+
+                        <h2>Level</h2>
+                        <div class="levels">
+                            <label><input type="checkbox"> Beginner</label>
+                            <label><input type="checkbox"> Intermediate</label>
+                            <label><input type="checkbox" checked> Professional</label>
+                        </div>
+                    </section>
+
+                    <section class="recommendations">
+                        <h2>Recommended for You</h2>
+                        <div class="course-cards">
+
+                            <div class="course-card">
+                                <div class="course-image"><img src="img/html.png" alt=""></div>
+                                <h3>HTML</h3>
+                                <p>Aadi</p>
+                            </div>
+
+                            <div class="course-card">
+                                <div class="course-image"><img src="img/css.png" alt=""></div>
+                                <h3>CSS</h3>
+                                <p>Akash Gupta</p>
+                            </div>
+
+                            <div class="course-card">
+                                <div class="course-image"><img src="img/php.png" alt=""></div>
+                                <h3>PHP</h3>
+                                <p>Anuj</p>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image"><img src="img/laravel.png" alt=""></div>
+                                <h3>Laravel</h3>
+                                <p>Shivendra</p>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image"><img src="img/django.png" alt=""></div>
+                                <h3>Django</h3>
+                                <p>Devesh</p>
+                            </div>
+                            <div class="course-card">
+                                <div class="course-image"><img src="img/java.png" alt=""></div>
+                                <h3>Java</h3>
+                                <p>Anna May</p>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </section>
+
+            <!-- Courses Section -->
+            <section id="courses" class="content-section">
+                <h1>My Learning</h1>
+                <section class="learning-section">
+                    <!-- Scrollable List of Courses -->
+                    <div class="courses">
+                        <div class="course-item active" data-description="Photography essentials">
+                            <h3>Becoming a Photographer</h3>
+                            <p>Clara Manning</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 69%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item" data-description="Design thinking techniques">
+                            <h3>Design Thinking 2.0</h3>
+                            <p>Chris Kinley</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 27%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item" data-description="Product photography basics">
+                            <h3>Product Photography</h3>
+                            <p>Lena Gold</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 11%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-item" data-description="Portrait techniques">
+                            <h3>Learn how to make portraits</h3>
+                            <p>Maria Silver</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 27%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Details Section -->
+                    <div class="course-details">
+                        <div class="video-placeholder">
+                            <div class="video-preview" id="course-video">
+                                <video controls id="preview-video">
+                                    <source src="img/become.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="course-info">
+                            <h3 id="course-title">Becoming a Photographer</h3>
+                            <p>Clara Manning</p>
+                            <p>43m • 4.7/5.0</p>
+                            <p id="course-description">
+                                This online course was created for you if you are interested in
+                                taking great digital photos and learning how to make your
+                                photography unique and outstanding.
+                            </p>
+                            <div class="course-actions">
+                                <button class="review-button">Review Course</button>
+                                <button class="continue-button">Continue Learning</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Saved Section -->
+            <section id="saved" class="content-section">
+
+                <div class="header">
+                    <h1>Saved Course</h1>
+                </div>
+                <section class="learning-section">
+
+                    <div class="courses">
+                        <div class="course-item active"
+                            data-course='{"title":"Web Design","instructor":"Ritesh Agarwal",  "duration":"1h 5m","rating":"4.5/5.0","description":"Learn the basics of Web design.","video":"typeface-preview.mp4"}'>
+                            <div class="course-info">
+                                <h3>Web Design</h3>
+
+                                <p>Ritesh Agarwal</p>
+                            </div>
+                        </div>
+
+                        <div class="course-item"
+                            data-course='{"title":"Building Anroid App","instructor":"Praiyanshu Singh","duration":"1h 13m","rating":"5.0/5.0","description":"In this course, you will learn how to build an Android app from scratch, including user interface design and logic.","video":"ios15-preview.mp4"}'>
+                            <div class="course-info">
+                                <h3>Building Anroid App</h3>
+                                <p>Praiyanshu Singh</p>
+                            </div>
+                        </div>
+
+
+                        <div class="course-item"
+                            data-course='{"title":"Excel: Formulas and Functions","instructor":"Om Prakash","duration":"2h 10m","rating":"4.7/5.0","description":"Master Excel with advanced formulas and functions to streamline your data analysis.","video":"excel-preview.mp4"}'>
+                            <div class="course-info">
+                                <h3>Excel: Formulas and Functions</h3>
+                                <p>Om Prakash</p>
+                            </div>
+                        </div>
+
+                        <div class="course-item"
+                            data-course='{"title":"Power Bi: Formulas and Functions","instructor":"Rahu Rastogi","duration":"2h 10m","rating":"4.7/5.0","description":"Master PowerBi with advanced formulas and functions to streamline your data analysis.","video":"excel-preview.mp4"}'>
+                            <div class="course-info">
+                                <h3>Power Bi: Formulas and Functions</h3>
+                                <p>Rahul Rastogi</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Course Details Section -->
+                    <div class="course-details">
+                        <div class="video-placeholder" style="color: red;">
+                            <div class="video-preview" id="course-video">
+                                <video controls id="preview-video">
+                                    <source src="img/typeface.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+
+                        <div class="course-info">
+                            <h2 id="preview-title">Typeface Design</h2>
+                            <p><strong>Instructor:</strong> <span id="preview-instructor">Gary Saltz</span></p>
+                            <p><strong>Duration:</strong> <span id="preview-duration">1h 5m</span></p>
+                            <p><strong>Rating:</strong> <span id="preview-rating">4.5/5.0</span></p>
+                            <p class="description" id="preview-description">
+                                Learn the basics of typeface design, including serif and sans-serif fonts.
+                            </p>
+
+                            <div class="course-actions">
+                                <button class="review-button">Review Course</button>
+                                <button class="continue-button">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.course-item').forEach(course => {
+            course.addEventListener('click', function () {
+                // Remove the active class from all courses
+                document.querySelectorAll('.course-item').forEach(c => c.classList.remove('active'));
+
+                // Add the active class to the clicked course
+                this.classList.add('active');
+
+                // Get the video URL and description from the data attributes
+                const videoUrl = this.getAttribute('data-video');
+                const courseTitle = this.querySelector('h3').innerText;
+                const courseDescription = this.getAttribute('data-description');
+
+                // Update the video iframe
+                document.getElementById('course-video').src = videoUrl;
+
+                // Update the course title and description
+                document.getElementById('course-title').innerText = courseTitle;
+                document.getElementById('course-description').innerText = courseDescription;
+            });
+        });
+
+    </script>
+
+    <script>
+        // JavaScript for tab switching functionality
+        document.querySelectorAll('.tab-link').forEach(tab => {
+            tab.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Remove active class from all content sections
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Add active class to the clicked section
+                const targetSection = document.getElementById(this.dataset.target);
+                targetSection.classList.add('active');
+
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-link').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                // Add active class to the clicked tab
+                this.classList.add('active');
+            });
+        });
+    </script>
+    <script>
+        // Add click event listeners to the course cards to update the preview section
+        document.querySelectorAll('.course-item').forEach(card => {
+
+            card.addEventListener('click', () => {
+
+                // Remove the 'active' class from all cards
+                document.querySelectorAll('.course-item').forEach(c => c.classList.remove('active'));
+
+                // Add the 'active' class to the clicked card
+                card.classList.add('active');
+
+                // Get course data from the data-course attribute
+                const courseData = JSON.parse(card.getAttribute('data-course'));
+
+                // Update the preview section with the selected course data
+                document.getElementById('preview-title').textContent = courseData.title;
+                document.getElementById('preview-instructor').textContent = courseData.instructor;
+                document.getElementById('preview-duration').textContent = courseData.duration;
+                document.getElementById('preview-rating').textContent = courseData.rating;
+                document.getElementById('preview-description').textContent = courseData.description;
+                document.getElementById('preview-video').querySelector('source').src = courseData.video;
+
+                // Reload the video to apply the new source
+                document.getElementById('preview-video').load();
+            });
+        });
+    </script>
+    <script src="js/usersscripts.js"></script>
+</body>
+
+</html>

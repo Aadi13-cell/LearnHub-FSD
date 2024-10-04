@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title> LearnHub | Admin </title>
+  <link rel="stylesheet" href="css/admindashboard.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+     
+    }
+
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+      border-color: inherit;
+      border-style: solid;
+      background-color: rgb(79, 79, 79);
+    }
+
+    .table {
+      --bs-table-bg: transparent;
+      --bs-table-accent-bg: transparent;
+      --bs-table-striped-color: #212529;
+      --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+      --bs-table-active-color: #212529;
+      --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+      --bs-table-hover-color: #212529;
+      --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      color: #f8fbff;
+      vertical-align: top;
+      border-color: #dee2e6;
+    }
+
+    .table-striped {
+      color: #ffffff;
+      background: rgb(0, 0, 0);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img class="logo_name" src="logo_svg_1.png" alt="" style="height: 40px; width: 40px; padding: 5px;">
+      <div class="logo_name">LearnHub</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search...">
+        <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links_name">User</span>
+        </a>
+        <span class="tooltip">User</span>
+      </li>
+      
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+        <span class="tooltip">Analytics</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-folder'></i>
+          <span class="links_name">File Manager</span>
+        </a>
+        <span class="tooltip">Files</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+      
+      <li>
+        <a class="nav-link active" aria-current="page" th:href="@{/logout}">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Logout</span>
+        </a>
+        <span class="tooltip">logout</span>
+      </li>
+      
+      <li class="profile">
+        <div class="profile-details">
+          <img src="profile.jpg" alt="profileImg">
+          <div class="name_job">
+            <div class="name">Anuj Pratap singh</div>
+            <div class="job">Web designer</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="text">Admin Dashboard</div>
+    <br>
+
+    <!-- Registered Data -->
+    <div class="row">
+      <h1 style="text-align: center;">Registered Users</h1>
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="user: ${value}">
+            <td th:text="${user.fid}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.address}"></td>
+            <td th:text="${user.phone}"></td>
+            <td th:text="${user.email}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="js/admindashboard.js"></script>
+
+</body>
+
+</html>

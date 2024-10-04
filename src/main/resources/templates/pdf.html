@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub:PDF Reader</title>
+    <link rel="stylesheet" href="css/pdf.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Collection</h1>
+        <div class="pdf-cards">
+            <!-- Repeat this block for each PDF -->
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf1.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 1</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf2.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf3.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf4.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf5.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf6.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf7.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <div class="pdf-card" onclick="openPDF('pdfs/pdf8.pdf')">
+                <img src="images/pdf-icon.png" alt="PDF Icon">
+                <p>PDF Title 2</p>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+
+    <script src="js/pdf.js"></script>
+</body>
+</html>
